@@ -73,26 +73,26 @@ hello("기홍","USA")*/
 //     });
 // });
 
-$(function(){
-    var txt1 = $(".txt1");
-    var count = 1;
+// $(function(){
+//     var txt1 = $(".txt1");
+//     var count = 1;
 
-    $(".btnWrap button").on("click",function(){
-        var ts = $(this);
-        if(ts.hasClass("backBtn")){
-            count--;
-            if(count<1){
-                count = 1;
-                return;
-            }
-            txt1.stop(true,true).animate({marginLeft:"-=10%"},500);
-        }else{
-            count++;
-            if(count > 10) {
-                cont =10;
-                return;
-            }
-            txt1.stop(true,true).animate({marginLeft:"+=10%"},500);
-        }
-    });
-});
+//     $(".btnWrap button").on("click",function(){
+//         var ts = $(this);
+//         if(ts.hasClass("backBtn")){
+//             count--;
+//             if(count<1){
+//                 count = 1;
+//                 return;
+//             }
+//             txt1.stop(true,true).animate({marginLeft:"-=10%"},500);
+//         }else{
+//             count++;
+//             if(count > 10) {
+//                 cont =10;
+//                 return;
+//             }
+//             txt1.stop(true,true).animate({marginLeft:"+=10%"},500);
+//         }
+//     });
+// });
