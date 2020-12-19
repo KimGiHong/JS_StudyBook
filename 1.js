@@ -47,11 +47,52 @@ hello("기홍","USA")*/
 //     $(".wrap").append("<p>텍스트2</p>");
 // });
 
+// $(function(){
+//     $(".btn1 a").on("click",function() {
+//         var ts = $(this);
+//         $(".btn1").next("ul").filter(":visible").hide();
+//         ts.parent().next().show();
+//         return false;
+//     });
+// });
+
+//버튼 애니매이션
+// $(function() {
+//     $(".btn1").on("click",function() {
+//         var ts = $(this);
+//         if(ts.text() == "숨김") {
+//             $(".wrap").slideUp(1000, function(){
+//                 $(".btn1").text("노출");
+//             });
+//         }else {
+//             $(".wrap").slideDown(1000, function(){
+//                 $(".btn1").text("숨김");
+//             });
+//         }
+        
+//     });
+// });
+
 $(function(){
-    $(".btn1 a").on("click",function() {
+    var txt1 = $(".txt1");
+    var count = 1;
+
+    $(".btnWrap button").on("click",function(){
         var ts = $(this);
-        $(".btn1").next("ul").filter(":visible").hide();
-        ts.parent().next().show();
-        return false;
+        if(ts.hasClass("backBtn")){
+            count--;
+            if(count<1){
+                count = 1;
+                return;
+            }
+            txt1.stop(true,true).animate({marginLeft:"-=10%"},500);
+        }else{
+            count++;
+            if(count > 10) {
+                cont =10;
+                return;
+            }
+            txt1.stop(true,true).animate({marginLeft:"+=10%"},500);
+        }
     });
 });
