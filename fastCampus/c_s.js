@@ -178,7 +178,7 @@ if(표현식){
 // const message = n % 5 === 0 ? '5의 배수 입니다' : '5의 배수가 아닙니다';
 // console.log(message);
 
-let n = 5;
+// let n = 5;
 
 // switch(n) {
 //     default:
