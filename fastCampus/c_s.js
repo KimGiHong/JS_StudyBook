@@ -208,3 +208,147 @@ if(표현식){
 //     default:
 //         console.log(n);
 // }
+
+//new Object() <object로 객체 만들기>
+//기초 객체
+
+// const a = new Object();
+
+// console.log(a, typeof a);
+
+// const b = new Object(true);
+
+// console.log(b, typeof b);
+
+// const c = new Object({name : 'Hong'}); //문자 그대로 출력하는 객체 리터럴 객체?함수?
+
+// console.log(c, typeof c);
+
+//Prototype Chain <프로토타입 체인> .prototype
+
+// function Person(name,age) {
+//     this.name = name;
+//     this.age = age;
+//     // this.hello = function() {
+//     //     console.log('hello',this.name,this.age);
+//     // };
+// }
+
+// Person.prototype.hello = function() {
+//     console.log('hello',this.name, this.age);
+// }
+
+// const p = new Person('Hong',17);
+
+// p.hello();
+// console.log(p.toString());
+
+// console.log(Person.prototype);
+// console.log(Person.prototype.toString);
+// console.log(Person.prototype.constructor);
+// console.log(Person.prototype.hello);
+
+// console.log(Object.prototype);
+// console.log(Object.prototype.toString);
+// console.log(Object.prototype.constructor);
+
+//Prototype 이해하기
+// function Person() {}
+
+// Person.prototype.eyes = 2;
+// Person.prototype.nose = 1;
+
+// var kim = new Person();
+// var park = new Person();
+
+// console.log(kim.eyes);
+// console.log(park.nose);
+
+//요약 : Person.prototype이라는 빈 Object가 어딘가에 존재하고, 
+//Person함수로부터 생성된 객체(kim,park)들은 어딘가에 존재하는 Object에 들어있는
+//값을 모두 가져다 쓸수 있다.
+
+// console.log(p instanceof Person);
+// console.log(p instanceof Object);
+//p라는 객체는 person이라고 하는 생성자 함수로 나왔는데 그 person이라 하는것은
+//object로부터 프로토타입 체인을 받아온 후에 내가 설정한 어떤 함수,property를 가지고있는 형태
+
+//프로토타입을 이용한 객체 확장
+
+// function Person() {}
+
+// Person.prototype.hello = function() {
+//     console.log('hello');
+// }
+
+// function Korean(region) {
+//     this.region = region;
+//     this.where = function() {
+//         console.log('where',this.region);
+//     };
+// }
+
+// Korean.prototype = Person.prototype;
+
+// const k = new Korean('Seoul');
+
+// k.hello(); //hello값을 그대로 가져와 hello출력
+// k.where(); //korean이라는 함수안 region에 seoul이라는 값을 넣어 'where Seoul'출력
+
+// console.log(k instanceof Korean);
+// console.log(k instanceof Person); //korean의 프로토타입 체인
+// console.log(k instanceof Object); //모두를 프로토타입으로 가지고 있는것
+
+
+//객체 리터럴
+
+// const a = {};
+
+// console.log(a, typeof a);
+
+// const b = {
+//     name: 'Hong'
+// };
+
+// console.log(b,typeof b);
+
+// const c = {
+//     name:'Hong',
+//     hello1() {
+//         console.log('hello1',this.name);
+//     },
+//     hello2: function(){
+//         console.log('hello2',this.name);
+//     },
+//     hello3: () => {
+//         console.log('hello3',this); //this가 이 객체를 가르키지 않고 name을 쓸시 undefined출력
+//     },
+// };
+
+// c.hello1();
+// c.hello2();
+// c.hello3();
+
+
+//표준 내장 객체 : Array
+
+// const a = new Array('red','black','white');
+
+// console.log(a,typeof a);
+// console.log(a instanceof Array);
+// console.log(a instanceof Object);
+
+// //Instanceof : instanceof 는 비교 연산자로 >,<,== 와 같이 두개의 인자를 받는 
+// //연산자로 앞의 비교 연산자들을 이용하는 기분으로 사용하면 된다. 
+// //하지만 결과로 리턴하는 것은 typeof와는 성질이 조금 다르다. 
+// //instanceof는 해당하는 변수가 사용하고 있는 prototype의 chain을 2번째 인자와 쭉 비교해서 
+// //true/false 값을 리턴한다.
+
+// const b = ['red','green','blue'];
+
+// console.log(b,typeof b);
+// console.log(b instanceof Array);
+// console.log(b instanceof Object);
+
+// console.log(b.slice(0,1)); //array에 들어있는 함수 프로토타입 체인에 들어있는것
+// console.log(Array.prototype.slice,Object.prototype.slice); //프로토타입 체인상 array가 추가로 구현한 함수이다.
