@@ -16,22 +16,75 @@
 
 //constructor 생성자
 
-class A {}
+// class A {}
 
-console.log(new A());
+// console.log(new A());
 
-class B {
-    constructor() {
-        console.log('constructor');
-    }
-}
-console.log(new B());
+// class B {
+//     constructor() {
+//         console.log('constructor');
+//     }
+// }
+// console.log(new B());
 
-class C {
-    constructor(name,age) {
-        console.log('constructor',name ,age);
-    }
-}
+// class C {
+//     constructor(name,age) {
+//         console.log('constructor',name ,age);
+//     }
+// }
 
-console.log(new C('Hong', 17));
-console.log(new C());
+// console.log(new C('Hong', 17));
+// console.log(new C());
+
+//멤버 변수 <객체의 프로퍼티>
+// class A {
+//     constructor(name,age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
+// console.log(new A('Hong', 17));
+
+//class field는 런타임 확인
+
+// class B { //런타임 항시 확인
+//     name; //this.name
+//     age; //this.age
+// }
+// console.log(new B());
+
+// class C {
+//     name = 'no name';
+//     age = '0';
+
+//     constructor(name,age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
+
+// console.log(new C('Hong', 17));
+
+//멤버 함수
+
+// class A{
+//     hello1() {
+//         console.log('hello1',this); //this는 자신을 사용하는 함수 설명?
+//     }
+//     hello2 = () => {
+//         console.log('hello2',this);
+//     };
+// }
+
+// new A().hello1();
+// new A().hello2();
+
+// class B {
+//     name = 'Hong';
+
+//     hello() {
+//         console.log('hello', this.name);
+//     }
+// }
+
+// new B().hello();
