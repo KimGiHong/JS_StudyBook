@@ -112,6 +112,19 @@
 // class B {
 //     _name = 'no name';
 
+//     get name() {
+//         return this._name + '@@@';
+//     }
+// }
+
+// const b = new B();
+// console.log(b);
+// b.name = 'Hong';
+// console.log(b);
+
+//static 변수,함수
+//객체가 아니고,클래스의 변수와 함수
+
 // class A {
 //     static age = 18;
 //     static hello() {
