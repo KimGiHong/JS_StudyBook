@@ -106,3 +106,18 @@ a.name = 'Hong';
 console.log(a);
 console.log(a.name);
 console.log(a._name);
+
+// readonly
+
+class B {
+    _name = 'no name';
+
+    get name() {
+        return this._name + '@@@';
+    }
+}
+
+const b = new B();
+console.log(b);
+b.name = 'Hong';
+console.log(b);
