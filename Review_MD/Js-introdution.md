@@ -1,16 +1,16 @@
 # 자바스크립트 입문
 
 ## 목차
-1.[변수(Variables)](#변수)
-2.[연산자(Operator)](#연산자)
-3.[조건문(Conditional)](#조건문)
-4.[함수(Functions)](#함수)
-4-5.[Clean-Code-Javascript](#clean-code-javascript)
-5.[객체(Object)](#객체)
-6.[배열(Arrangement)](#배열)
-7.[반복문(Loop)](#반복문)
-8.[배열 내장함수(Array built-in function)](#배열-내장함수)
-9.프로토타입 & 클래스
+1.[변수(Variables)](#변수)  
+2.[연산자(Operator)](#연산자)  
+3.[조건문(Conditional)](#조건문)  
+4.[함수(Functions)](#함수)  
+4-5.[Clean-Code-Javascript](#clean-code-javascript)  
+5.[객체(Object)](#객체)  
+6.[배열(Arrangement)](#배열)  
+7.[반복문(Loop)](#반복문)  
+8.[배열 내장함수(Array built-in function)](#배열-내장함수)  
+9.프로토타입 & 클래스  
 
 ## 변수
 * 변수는, 바뀔수 있는 값을 말합니다.
