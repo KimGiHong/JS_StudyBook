@@ -6,8 +6,8 @@ JavaScript 는 웹 브라우저에서 사용하기 위하여 만들어진 프로
 
 추가적으로, NW.js, Electron 등의 도구를 사용하여 데스크탑 앱을 만들 수도 있고, react-native, NativeScript 등의 도구를 사용하여 모바일 앱도 만들 수 있습니다.
 
-JavaScript 는 나날히 발전해 가고 있고, 매년마다 새로운 문법들도 나오고 있습니다. 이 강의에서는 모든 문법들을 다루지는 않습니다. 하지만, 알아두면 개발하는데 충분히 쓸모있는 만큼 학습하게 됩니다.
-
 1. [자바스크립트 기초](Review_MD/Js-introdution.md)
 1. [자바스크립트 유용한 문법](Review_MD/Js-grammar.md)
-1. [자바스크립트 비동기 처리]()
+1. [자바스크립트 비동기 처리](Review_MD/Js-A_P.md)
+
+* React-Study-Book은 추후에 추가될 예정
