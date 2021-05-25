@@ -9,5 +9,3 @@ JavaScript 는 웹 브라우저에서 사용하기 위하여 만들어진 프로
 1. [자바스크립트 기초](Review_MD/Js-introdution.md)
 1. [자바스크립트 유용한 문법](Review_MD/Js-grammar.md)
 1. [자바스크립트 비동기 처리](Review_MD/Js-A_P.md)
-
-* React-Study-Book은 추후에 추가될 예정
